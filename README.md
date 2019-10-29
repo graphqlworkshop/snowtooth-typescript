@@ -9,15 +9,11 @@ The technologies used for this project are:
 
 ## Steps
 
-# Create React App with TypeScript Setup
+## Create React App with TypeScript Setup
 
-Creating a front-end for Snowtooth with TypeScript
+If you want to start from scratch, just start here! Otherwise, you can run this repo which is the finished project.
 
-## Show Slides
-
-- [Snowtooth TypeScript Slides](https://slides.com/moonhighway/typescript-graphql): https://slides.com/moonhighway/typescript-graphql
-
-## TypeScript & Create React App
+### TypeScript & Create React App
 
 1. Run `create-react-app` with the `--typescript` flag
 
@@ -34,15 +30,15 @@ npm start
 - Behind the scenes of `react-scripts` everything is happening: building project, babel, etc.
 - `src` for all files `.tsx`
 
-# Apollo CLI & VSCode Extension
+## Apollo CLI & VSCode Extension
 
-## 1. Downloading the Schema
+### 1. Downloading the Schema
 
 ```
 npx apollo schema:download --endpoint=https://snowtooth.moonhighway.com graphql-schema.json
 ```
 
-## 2. Installing the VSCode Extension
+### 2. Installing the VSCode Extension
 
 - Install the extension
 - Add the `apollo.config.js`
@@ -64,7 +60,7 @@ ENGINE_API_KEY=service:eveporcello-6318:RQYT_LtqhrYG8Taw7ORtzA
 - Show the Apollo Tab at the bottom
 - In a second, we'll start to see how cool this is.
 
-## 3. Creating the Query
+### 3. Creating the Query
 
 1. Create `src/queries` folder
 2. Create `liftQuery.ts` file
@@ -93,13 +89,13 @@ const liftQuery = gql`
 export default liftQuery;
 ```
 
-## 4. Generate Types
+### 4. Generate Types
 
 ```
 npx apollo codegen:generate --localSchemaFile=graphql-schema.json --target=typescript --includes=src/**/*.ts --tagName=gql --addTypename --globalTypesFile=src/types/graphql-global-types.ts types
 ```
 
-# Snowtooth UI
+## Snowtooth UI
 
 Based on the schema and the types, we'll create the UI for Snowtooth.
 
