@@ -38,7 +38,7 @@ npm start
 npx apollo schema:download --endpoint=https://snowtooth.moonhighway.com graphql-schema.json
 ```
 
-### 2. Installing the VSCode Extension
+### 2. Installing the `Apollo GraphQL` VSCode Extension
 
 - Install the extension
 - Add the `apollo.config.js`
